@@ -1,6 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- La app necesita red para consumir la API de Laravel.
+         Este permiso solo estaba en el manifest de debug/, asi que las compilaciones
+         profile y release se quedaban sin internet. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
-        android:label="ferchys_mobile"
+        android:label="Ferchy's Postres"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
